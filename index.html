@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sander Lückers Architektur</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Linke Spalte -->
+        <div class="left-column">
+            <div class="fixed-header">
+                <p>
+                -----------------------------------------<br>
+                <a href="#home">Sander Lückers Architektur GmbH</a><br>
+                c/o Birmensdorferstrasse 604<br>
+                CH-8055 Zürich<br>
+                <a href="mailto:info@sanderlueckers.ch">info@sanderlueckers.ch</a><br>
+                <a href="tel:+41774753359">+41 77 475 33 59</a><br>
+                <a href="https://www.instagram.com/sanderlueckers/">instagram</a><br>
+                -----------------------------------------<br>
+                </p>
+            </div>
+
+             <!--  Hamburger-Button -NUR- für mobile view eingefügt -->
+            <button id="menu-toggle" class="mobile-only">☰</button>
+            <nav class="mobile-menu">
+                <a href="#home">Startseite</a>
+                <a href="#Tödistrasse">Pfäffikon</a>
+                <a href="#Krokusstrasse">Krokusstrasse</a>
+                <a href="#Birmensdorferstrasse">Birmensdorferstrasse</a>
+                <a href="#Bijenven">Bijenven</a>
+                <a href="#Info">Info</a>
+            </nav>
+
+            <div class="text-section">
+                <!-- Navigation oberhalb -->
+                <div id="navigation-above" class="navigation">
+                    <a href="#Tödistrasse">Pfäffikon</a>
+                    <a href="#Krokusstrasse">Krokusstrasse</a>
+                    <a href="#Birmensdorferstrasse">Birmensdorferstrasse</a>
+                    <a href="#Bijenven">Bijenven</a>
+                    <a href="#Info">Info</a>
+                </div>
+                <!-- Fixer Text für Projekte -->
+                <div id="Tödistrasse-text" class="project-description" style="display: none;">
+                    <p>Pfäffikon<br>Komplettsanierung<br>Direktauftrag<br>2024-2025<br>laufend</p>
+                </div>
+                <div id="Krokusstrasse-text" class="project-description">  
+                    <p>Dietikon<br>Aufstockung<br>Direktauftrag<br>2023-2024<br>abgeschlossen</p>
+                </div>
+                <div id="Birmensdorferstrasse-text" class="project-description" style="display: none;">
+                    <p>Zürich<br>Umbau des Erdgeschosses<br>Direktauftrag<br>2024<br>abgeschlossen</p>
+                </div>
+                <div id="Bijenven-text" class="project-description" style="display: none;">
+                    <p>Uitdam (NL)<br>Komplettsanierung<br>Direktauftrag <br>2022<br>abgeschlossen</p>
+                </div>
+                <div id="Info-text" class="project-description" style="display: none;">
+                    <p>Werdegang<br>Profil<br>Werte<br>Partner<br>Firma<br>Website</p>
+                </div>
+                <!-- Dynamischer Text -->
+                <div id="dynamic-text">
+                    <!-- Dynamischer Text wird hier eingefügt -->
+                </div>
+
+                <!-- Navigation unterhalb -->
+                <div id="navigation-below" class="navigation">
+                </div>  
+            </div>
+        </div>
+
+        <!-- Rechte Spalte -->
+        <div class="right-column">
+            <!-- "Homepage", bzw Landingpage mit Start-Bild -->
+            <section id="home">
+                <div class="Bilder" data-description="">
+                    <img src="img/01Homepage_Bild.jpg" alt="Homepage Bild"> 
+                </div>
+            </section>
+
+            <!-- Projekt  TOE, Pfäffikon-->
+            <section id="Tödistrasse">
+                
+                <div class="Bilder" data-description="Das freistehende Haus mit Blick auf den Pfäffikersee wurde Anfang der 50er Jahre im Landhausstil gebaut. 
+                Es befindet sich seit vielen Jahren im Familienbesitz. 
+                Die Sanierung soll die zukünftige Nutzung durch die Familie sichern, ohne den ursprünglichen Charakter zu verlieren.
+                <br><br>Photo © Sander Lückers">
+                    <img src="img/TOE-04.jpg" alt="TOE Bild 4">
+                </div>
+                                             
+                <div class="Bilder" data-description="Der Umbau sieht eine energetische Ertüchtigung vor, inklusive des vollständigen Austauschs der Haustechnik. 
+                Damit das Gebäude zukünftig als Mehrgenerationenhaus genutzt werden kann, wird die Einliegerwohnung zum Garten hin zu einer vollwertigen Geschosswohnung umgebaut. 
+                Die Hauptwohnung in den oberen Geschossen wird «sanft» saniert. 
+                <br><br>Photo © Sander Lückers">
+                    <img src="img/TOE-01.jpg" alt="TOE Bild 1">
+                </div>
+
+                <div class="Bilder" data-description="Damit das äussere Erscheinungsbild des Hauses erhalten bleibt, ist eine Sanierung auf der Innenseite geplant. 
+                Diese Sanierungsart soll zudem sicherstellen, dass die Einbettung des Gebäudes in die Hanglage mit üppigem Baumbestand bewahrt bleibt. 
+                <br><br>Photo © Sander Lückers">
+                    <img src="img/TOE-02.jpg" alt="TOE Bild 2">
+                </div>
+
+                <div class="Bilder" data-description="Die Hanglage mit den erdberührten Wänden zum Wohnraum stellt eine bauphysikalische Herausforderung dar. 
+                Für eine zukünftige Sanierung ist geplant, Abdichtungen gegen Feuchte einzusetzen, die in Kombination mit biobasierten, diffusionsoffenen und kapillär wirksamen Baustoffen verwendet werden sollen. 
+                Zudem ist die Installation eines Luftwechsels vorgesehen, um ein gesundes Innenklima zu gewährleisten.
+                <br><br>Photo © Sander Lückers">
+                    <img src="img/TOE-03.jpg" alt="TOE Bild 3">
+                </div>
+              
+                <div class="Bilder" data-description="Die Kellerräume, die an die jetzige Einliegerwohnung angrenzen, werden radikal geöffnet, um die Wohnfläche zu vergrössern. 
+                Über die Diagonale werden Küche, Wohnzimmer und Wintergarten miteinander verbunden. 
+                Die bisher geschlossenen und kleinteiligen Räume schaffen künftig eine Lichtachse, die quer durch das Gebäude verläuft.
+                <br><br>Photo © Sander Lückers">
+                    <img src="img/TOE-05.jpg" alt="TOE Bild 5">
+                </div>
+
+                <div class="Bilder" data-description="An der Stelle, an der zukünftig die neue Wohnküche entstehen soll, befindet sich momentan ein Knotenpunkt von tragenden Wänden. 
+                Diese Wände tragen die Geschossdecken, das gesamte Treppenhaus und den Kamin. 
+                Für die geplante Umgestaltung werden diese Strukturen zurückgebaut und anschliessend mit Stahlträgern und Stützen unterfangen.
+                <br><br>Photo © Sander Lückers">
+                    <img src="img/TOE-06.jpg" alt="TOE Bild 6">
+                </div>
+
+                <div class="Bilder" data-description="Die Gestaltung der Wohnküche berücksichtigt viele Aspekte und erfordert eine offene Haltung im Planungsprozess. 
+                Das Raumgefüge entsteht aus mehreren kleinteiligen Bereichen, die vom groben Umbau betroffen sind. 
+                Die Stahlträger strukturieren den Raum, indem sie Zonen schaffen. 
+                Die Oberflächen werden mit kräftigen Gesten gestaltet, zeigen aber auch noch Spuren von früher. 
+                Für Einbauten wie die Küche und die Heizkörper werden gebrauchte Bauteile gesucht, um den nachhaltigen Ansatz zu unterstützen.
+                <br><br>Photo © Sander Lückers">
+                    <img src="img/TOE-07.jpg" alt="TOE Bild 7">
+                </div>
+                
+                <div class="Bilder" data-description="Der Aussensitzplatz der unteren Wohnung soll zu einem Wintergarten werden. 
+                Damit wird nicht nur die Wohnfläche erheblich vergrössert, sondern auch eine thermische Zwischenzone geschaffen, die Teil der gewünschten energetischen Ertüchtigung ist. 
+                Die Fassade bleibt einfach und roh gehalten; der Sockel aus Ortsbeton ermöglicht es, weiter in einfacher Fichte zu bauen.
+                <br><br>Photo © Sander Lückers">
+                    <img src="img/TOE-09.jpg" alt="TOE Bild 8">
+                </div>
+
+                <div class="Bilder" data-description="Im Wandputz im Flur der oberen Wohnung wurde Asbest nachgewiesen. 
+                Der kontaminierte Deckputz wurde durch Schleifen entfernt.
+                <br><br>Photo © Sander Lückers">
+                    <img src="img/TOE-10.jpg" alt="TOE Bild 9">
+            </section>
+
+
+
+
+            <!-- Projekt  Krokusstrasse, Dietikon -->
+            
+            <section id="Krokusstrasse">
+                <div class="Bilder" data-description="Ursprünglich als Einfamilienhaus errichtet, wurde das Haus 2017 in ein Mehrgenerationenhaus umgebaut.
+                Da die obere Wohnung in den letzten Jahren als zu eng empfunden wurde, beauftragte man 2023 Sander Lückers um die obere Etage aufzustocken.
+                <br><br>Photo © Federico Farinatti">
+                    <img src="img/KRK-01.jpg" alt="Projekt 1 Bild 1">
+                </div>
+
+                <div class="Bilder" data-description="Das freistehende Haus aus den 1950er Jahren ist Teil einer Siedlung mit baugleichen Häusern.
+                <br><br>Photo © Sander Lückers">
+                <img src="img/KRK-19.JPG" alt="Projekt 1 Bild 19">
+                </div>
+                               
+                <div class="Bilder" data-description="Die während Jahrzehnten getroffenen Entscheidungen, unterschiedlichen Gestaltungen, das Baurecht und das eigenartige Tragwerk des Bestands erforderten eine offene Haltung im Entwurfprozess. Eine Mischung aus
+                Faszinationen, humorvolle Diskussionen und den kurvigen Wegen des Bauens führte schliesslich zu dem Endergebnis. 
+                Das Haus will sich nicht über eine geplante Bildvision legitimieren, sondern soll vielmehr als ein Konglomerat aus Entscheidungen betrachtet werden.
+                <br><br>Photo © Federico Farinatti">
+                    <img src="img/KRK-02.jpg" alt="Projekt 1 Bild 2">
+                </div>
+                
+                <div class="Bilder" data-description="Darstellung der Westfassade in schwarz (Bestand), rot (neu), gelb (Abbruch).
+                Die Aufstockung, gemeinsam mit geringfügigen Ergänzungen am Bestand, bringt die Gesamtproportionen des mehrfach erweiterten Hauses wieder ins
+                Gleichgewicht."><br>
+                    <img src="img/KRK-03.jpg" alt="Projekt 1 Bild 3">
+                </div>
+
+                <div class="Bilder" data-description="Der 2017 hinzugefügte Anbau vergrösserte den Fussabdruck des Hauses, was auch die baurechtlichen
+                Möglichkeiten zur Aufstockung (2023) erweiterte. Man entschied sich für eine Aufstockung mit einem einseitig schrägen und einem einseitig flachen Dach.
+                <br><br>Photo © Federico Farinatti">
+                    <img src="img/KRK-04.jpg" alt="Projekt 1 Bild 4">
+                </div>
+                
+                <div class="Bilder" data-description="Das vom Baurecht 'diktierte' nordseitige Schrägdach wurde in der Gestaltung der Dachflächen zelebriert. 
+                Die hinterlüfteten Wellplatten aus Faserzement ragen allseitig hervor. Als unterer, markanter Abschluss dient eine grossformatige, winkelförmige Wasserrinne. 
+                Das südseitige Flachdach bleibt gestaltungstechnisch unaufdringlich und bietet Platz für sämtliche erforderliche Technik.
+                <br><br>Photo © Federico Farinatti">
+                    <img src="img/KRK-05.jpg" alt="Projekt 1 Bild 5">
+                </div>
+                
+               <div class="Bilder" data-description="Die Farben und Materialien des Neubaus wurden im Einklang mit denen des Bestands gewählt. 
+                 Das umlaufende Balkongeländer wurde in auffälligen Farben gestrichen, um einen weiteren visuellen Zusammenhang der Gebäudeteile zu schaffen.
+                <br><br>Photo © Sander Lückers">
+                    <img src="img/KRK-06.jpg" alt="Projekt 1 Bild 6">
+                </div>
+
+                <div class="Bilder" data-description="Die Holzlatten der Balkongeländer wurden aus dem Bestand wiederverwendet und vom Auftraggeber selber gestrichen.
+                <br><br>Photo © Sander Lückers">
+                    <img src="img/KRK-14.jpg" alt="Projekt 1 Bild 14">
+                </div>
+
+                <div class="Bilder" data-description="Die Raumeinteilung folgt dem Verlauf eines tragenden Überzugs aus Stahlbeton, 
+                wodurch eine selbstverständliche Zonierung der Räume entsteht. 
+                Fenster an der West- und Ostseite bringen das Licht entlang der Erschliessungsachse ins Innere.
+                <br><br>Photo © Federico Farinatti">
+                    <img src="img/KRK-07.jpg" alt="Projekt 1 Bild 7">
+                </div>
+
+                <div class="Bilder" data-description="Die gewählte Dachform ermöglichte ein Geschoss mit dreiseitig geraden Wänden. 
+                Tragstruktur, Leitungen und Treppenhaus konnten so von unten übernommen und verlängert werden, ohne Anpassungen im Bestand.
+                <br><br>Photo © Sander Lückers">    
+                    <img src="img/KRK-08.jpg" alt="Projekt 1 Bild 8">
+                </div>
+                
+                <div class="Bilder" data-description="Einbauten wurden als Möbel gedacht.
+                Der Holzbau bleibt dabei stets der allgegenwärtige Hintergrund.
+                Konsequent wurden die Einbauten in hellgrau und dunkelgrau gehalten. Das dunkelgrau setzt dabei bewusst Akzente.
+                <br><br>Photo © Federico Farinatti">
+                    <img src="img/KRK-09.jpg" alt="Projekt 1 Bild 9">
+                </div>
+                
+                <div class="Bilder" data-description="Aufgrund der etwas engen Platzverhältnisse fungiert das Badezimmer als Verbindungsraum zwischen Schlafzimmer und Treppenhaus.">
+                    <img src="img/KRK-10.jpg" alt="Projekt 1 Bild 10">
+                </div>
+                
+                <div class="Bilder" data-description="Die Räume können über Schiebewände miteinander verbunden oder voneinander getrennt werden. 
+                So wurde ein möglichst fliessender Übergang zwischen den unterschiedlichen Nutzungen angestrebt. 
+                Die eher bescheidene vorhandene Fläche wird effizient genutzt, ohne dass die Räume klein wirken.
+                <br><br>Photo © Federico Farinatti">
+                    <img src="img/KRK-11.jpg" alt="Projekt 1 Bild 11">
+                </div>
+                
+                <div class="Bilder" data-description="In intensiver Zusammenarbeit mit den Auftraggebern, Planern und Handwerkern wurde das Gebäude erstellt. 
+                Die Lösung von Problemen fand im Dialog mit den Beteiligten statt. Die Planung, mit der sorgfältigen Gestaltung von einigen wichtigen Hauptelementen,
+                diente dabei als Leitfaden.
+                <br><br>Photo © Federico Farinatti">
+                    <img src="img/KRK-12.jpg" alt="Projekt 1 Bild 12">
+                </div>
+
+                <div class="Bilder" data-description="Elektroleitungen wurden direkt in den Wandelementen verlegt. 
+                Weitere Haustechnik wurde im Boden geführt, um Verbindungen zwischen Wand und Decke zu vermeiden. 
+                Dadurch konnte ein einfacher, schneller Holzbau vor Ort realisiert werden.
+                <br><br>Photo © Federico Farinatti">
+                    <img src="img/KRK-13.jpg" alt="Projekt 1 Bild 13">
+                </div>
+
+		        <div class="Bilder" data-description="Der bestehende Überzug aus Beton wurde statisch optimiert. Die heterogene, eher grobe Optik des Tragelements wurde beibehalten.
+                Lediglich die Krone wurde mittels Schleifen verdelt, um als Nutzfläche zu dienen.
+                <br><br>Photo © Sander Lückers">
+                <img src="img/KRK-15.jpg" alt="Projekt 1 Bild 15">
+                </div>
+
+                <div class="Bilder" data-description="Die gesamte Aufstockung wurde in vorfabrizierten Einzelteilen angeliefert und vor Ort zusammengesetzt.
+                Die Treppe wurde vom Schreiner hergestellt und als ein Stück vor Ort montiert.
+                <br><br>Photo © Sander Lückers">
+                <img src="img/KRK-16.jpg" alt="Projekt 1 Bild 16">
+                </div>
+
+                <div class="Bilder" data-description="Die Innenseiten der Wände im Holzbau wurden unbehandelt belassen, sodass die sorgfältig geplanten Fügungen sichtbar bleiben.
+                <br><br>Photo © Sander Lückers">
+                <img src="img/KRK-17.jpg" alt="Projekt 1 Bild 17">
+                </div>
+
+                <div class="Bilder" data-description="Im Fassadenbereich wurde auf das Streichen des Aussenputzes verzichtet. 
+                Der Zementputz in Kellenwurftechnik bietet eine spannende Oberfläche und ausreichend Witterungsschutz.
+                <br><br>Photo © Sander Lückers">
+                <img src="img/KRK-18.jpg" alt="Projekt 1 Bild 18">
+                </div>
+
+            </section>
+
+
+
+            <!-- Projekt Birmensdorferstrasse, Zürich -->
+             
+            <section id="Birmensdorferstrasse">
+
+                <div class="Bilder" data-description="Das aus den 50-er Jahren stammende Reiheneinfamilienhaus wurde über Jahrzehnte vermietet und daher
+                pragmatisch unterhalten, das Potential an Optimierungen nicht angezapft. 
+                Die ursprüngliche, typische Kleinteiligkeit der Innenräume wurde mittels 2 strategischen Durchbrüchen aufgelockert. 
+                <br><br>Photo © Sander Lückers">
+                    <img src="img/BMS-02.jpg" alt="Projekt 2 Bild 2">
+                </div>
+
+                <div class="Bilder" data-description="Durch die spiegelsymmetrische Anordnung des Layouts in der neuen Küche werden die baulichen Eingriffe noch stärker betont.
+                <br><br>Photo © Sander Lückers">
+                    <img src="img/BMS-01.jpg" alt="Projekt 2 Bild 1">
+                </div>
+
+                <div class="Bilder" data-description="Es wurde eine gebrauchte Forsterküche aus 1991 eingebaut. Die Wandplatten stammen aus einem Restbestand.
+                <br><br>Photo © Sander Lückers">
+                    <img src="img/BMS-03.jpg" alt="Projekt 2 Bild 3">
+                </div>
+
+                <div class="Bilder" data-description="Das bestehende Küchenfenster wurde entfernt und die Fensteröffnung nach unten erweitert. 
+                Die eingebauten Fenstertüren wurden als Gebrauchtbauteil erworben.
+                <br><br>Photo © Sander Lückers">
+                    <img src="img/BMS-04.jpg" alt="Projekt 2 Bild 4">
+                </div>
+
+                <div class="Bilder" data-description="Die originale, hochwertige Fensterbank aus Stein wurde ausgebaut und an neuer Position wieder eingemauert.
+                <br><br>Photo © Sander Lückers">
+                    <img src="img/BMS-05.jpg" alt="Projekt 2 Bild 5">
+                </div>
+
+		        <div class="Bilder" data-description="Wohnzimmer, Küche und Garten wurden direkt mit einander verbunden. Licht und Grün werden reingeholt, und somit wird eine räumliche Wirkung erzeugt. 
+                <br><br>Photo © Sander Lückers">
+                    <img src="img/BMS-06.jpg" alt="Projekt 2 Bild 6">
+                </div>
+
+                <div class="Bilder" data-description="Mit dem Abbau der bestehenden Einbauten, Wand- und Bodenbeläge wurden die Umbauaktivitäten seit 1951 sichtbar.
+                <br><br>Photo © Sander Lückers">
+                    <img src="img/BMS-07.jpg" alt="Projekt 2 Bild 7">
+                </div>
+
+                <div class="Bilder" data-description="Die 90-er Jahren Platten wurden entfernt, nachdem klar wurde, dass die originalen Klinker aus den 50-er Jahren noch drunter liegen.
+                <br><br>Photo © Sander Lückers">
+                    <img src="img/BMS-08.jpg" alt="Projekt 2 Bild 8">
+                </div>
+
+                <div class="Bilder" data-description="Die Aussentreppe wurde aus Dachbalken vom benachbarten Hauses gefertigt.
+                <br><br>Photo © Sander Lückers">
+                    <img src="img/BMS-09.jpg" alt="Projekt 2 Bild 9">
+                </div>
+            </section>
+
+            <!-- Projekt  Bijenven, Uitdam-->
+            <section id="Bijenven">
+                <div class="Bilder" data-description="Obwohl die ursprünglichen Baupläne aus den 70-er Jahre ein klares Schema zeigen, 
+                wurde das Haus über die Jahre hinweg mehrmals umgebaut. Die Klarheit, Struktur, und Eleganz des Bestandes gingen verloren. 
+                <br><br>Photo © Sander Lückers">
+                    <img src="img/BIJ-01.jpg" alt="Projekt 3 Bild 1">
+                </div>
+                
+                <div class="Bilder" data-description="Mit einfachen Eingriffen wurde die ursprüngliche Klarheit zurückgebracht.
+                Die Geschosse werden jeweils von zwei tragende Wände gegliedert.
+                <br><br>Photo © Sander Lückers">
+                    <img src="img/BIJ-02.jpg" alt="Projekt 3 Bild 2">
+                </div>
+                
+                <div class="Bilder" data-description="Das Farbschema mit grün und rosa verstärkt die Raumgliederung.
+                Eichenholz und helle Terrazzoplatten im Erdgeschoss sorgen für Helligkeit und Wärme zu gleicher Zeit. 
+                <br><br>Photo © Sander Lückers">
+                    <img src="img/BIJ-03.jpg" alt="Projekt 3 Bild 3">
+                </div>
+                
+                <div class="Bilder" data-description="Im Obergeschoss ermöglicht ein symmetrisch angeordnetes Dachfenster den Blick auf den See.
+                <br><br>Photo © Sander Lückers">
+                    <img src="img/BIJ-04.jpg" alt="Projekt 3 Bild 4">
+                </div>
+                
+                <div class="Bilder" data-description="Die tragende Wände zonieren die unterschiedliche Räume auf einfache Weise,
+                und bringen das Licht tief hinein. 
+                <br><br>Photo © Sander Lückers">
+                    <img src="img/BIJ-05.jpg" alt="Projekt 3 Bild 5">
+                </div>
+		        
+                <div class="Bilder" data-description="Bestehende Fenster wurden neu angeordnet, und die Beziehung mit Aussen optimiert. 
+                Das Licht führt einen nun durch die Wohnung. 
+                <br><br>Photo © Sander Lückers">
+                    <img src="img/BIJ-06.jpg" alt="Projekt 3 Bild 6">
+                </div>
+           
+            </section>
+
+            
+
+            <!-- Info  -->
+            <section id="Info" >
+                <p>Werdegang<br>
+                    1999-2006 Master of science in Architecture, Delft University of Technology<br>
+                    2007-2010 Angestellt bei One Architecture BV<br>
+                    2010-2013 Angestellt bei Spillmann Echsle Architekten AG<br>
+                    2013-2021 Angestellt bei Giuliani Hönger Architekten AG<br>
+                    2021-2023 Angestellt bei Conen Sigl Architekten GmbH<br>
+                    2023 Gründung Sander Lückers Architektur GmbH<br><br>
+                    Profil<br>
+                    Die Firma fokussiert sich auf Planung und Bauen für private Auftraggeber. 
+                    Die kleinmassstäblichen Projekte sind überschaubar und ermöglichen eine Entdeckungstour der persönlichen Werte in der Architektur. 
+                    Dazu ist es wichtig den ganzen Prozess zu erleben, von Machbarkeitsstudie bis hin zur Werkübergabe, die Planung, aber auch die Bauleitung vor Ort. 
+                    Das sorgfältig aufgebaute Netzwerk ermöglicht eine zielführende, und qualitativ hochwertige Planung und Ausführung der Projekte.<br><br>
+                    Werte<br>
+                    Architektur sollte sich nicht legitimieren über eine Bildvision, vielmehr als eine Kollage aus Entscheidungen.
+                    Zusammenarbeit sollte angenehm gestaltet werden können; Planung und Bauen sind sozial geprägte Prozesse.
+                    Der Architekt moderiert das Suchen nach Lösungen und sucht dazu den Dialog mit allen Teilnehmern.
+                    Um unsere Umwelt zu schonen, und das Bauen nicht überteuern zu lassen, sind kreative Lösungen und Umdenken gefragt.
+                    Unsere Ressourcen werden beschränkter und die Verfügbarkeit von Material und Arbeit ist nicht immer selbstverständlich.
+                    Wo nur möglich sollten bestehende Gebäude weiter genutzt und gebrauchte Materialien neu eingesetzt werden.
+                    Wo möglich soll mit lokalen Handwerkern und vorhandenen Materialien gebaut werden.
+                    Wertschätzung von Material und deren Verarbeitung stellt den Drang nach Beschichten und Abdecken in Frage.<br><br>
+                    Partner<br>
+                    APW AG (Baumanagement), Seforb SARL (Hochbau Ingenieur), Bakus Bauphysik & Akustik AG, Technik Im Bau AG (Sanitär), Eicher & Pauli AG
+                    (Heizung, Lüftung), S3-Engineering (Heizung, Lüftung, Sanitär), UNAX (Schadstoff Analyse), Baubüro Insitu AG, Zirkular GmbH (Bauphysik,
+                    Kreislaufwirtschaft), Federico Farinatti (Fotografie)<br><br>
+                    Firma<br>
+                    Sander Lückers Architektur GmbH, Zürich. Firmennummer (UID) CHE-237.900.821, Eintragung per 12.06.2023<br>
+                    Sander Lückers ist eingetragener Architekt im Niederländischen Architektenregister unter Nummer 1.070815.022.<br><br>
+                    Website<br> 
+                    Die Inhalte wurden sorgfältig und nach unserem aktuellen Kenntnisstand erstellt, dienen jedoch nur der Information und entfalten keine rechtlich
+                    bindende Wirkung. Wir behalten uns vor, die Inhalte vollständig oder teilweise zu ändern oder zu löschen. Alle Angebote sind freibleibend und
+                    unverbindlich. Alle auf dieser Website dargestellten Inhalte, wie Texte, Fotografien und Marken sind durch die jeweiligen Schutzrechte (Urheberrechte,
+                    Markenrechte) geschützt. Die Verwendung, Vervielfältigung usw. unterliegen unseren Rechten oder den Rechten der jeweiligen Urheber bzw.
+                    Rechteverwalter. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.<br><br>
+                    Diese Webseite nutzt keine Cookies. Die Sander Lückers Architektur GmbH zeichnet keine personenbezogenen Daten auf und gibt sie auch nicht an Dritte weiter. 
+                    Die Sander Lückers Architektur GmbH kann nicht ausschliessen, dass der externe Hosting-Service möglicherweise aus technischen Gründen personenbezogene Daten wie die IP-Adresse speichert. 
+                    Dies liegt im Verantwortungsbereich des Webhosters.<br><br>
+                    Programmierung © Astrid Lanz, Inhalte © Sander Lückers Architektur GmbH<br><br>
+                </p>
+            </section>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

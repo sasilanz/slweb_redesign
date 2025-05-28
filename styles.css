@@ -1,0 +1,461 @@
+
+
+/* Einstellungen für die Desktop Ansicht */
+
+@media (min-width: 769px) {
+    
+    html, body {
+        background-color: white; /* Weißer Hintergrund für die gesamte Seite */
+        color: black; /* Schwarze Schrift für die gesamte Seite */
+        margin: 0; /* Entfernt Standardabstände */
+        font-family: 'Verdana', sans-serif; /* Einheitliche Schriftart */
+        font-size: 13.33px; /* Schriftgröße für den Bildschirm */
+        line-height: 1.6; /* Zeilenhöhe für bessere Lesbarkeit */
+        box-sizing: border-box; /* Padding und Border in Breite/Höhe einbeziehen */
+    }
+    
+    * {
+        box-sizing: inherit; /* Einheitliches Box-Modell für alle Elemente */
+    }
+
+.container {
+    display: flex; /* Spalten nebeneinander anordnen */
+    flex-direction: row; /* Horizontale Ausrichtung */
+    height: 100vh; /* Volle Höhe des Viewports */
+}
+
+.left-column {
+    width: 25%; /* Breite der linken Spalte */
+    padding: 2%; /*dynamisches Padding */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.right-column {
+    width: 75%; /* Breite der rechten Spalte */
+    /* padding: 2%; /*dynamisches Padding */
+    overflow-y: auto; /* Scrollen in der rechten Spalte ermöglichen */
+    display: flex;
+    flex-direction: column; /* Bilder untereinander anordnen */
+    align-items: flex-start; /* Bilder am linken Rand ausrichten */
+
+}
+
+
+
+/* CSS Reset für Links (wichtig!) */
+a:link,
+a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+/* Allgemeine Link-Formatierung */
+a {
+    color: black; /* Schwarze Schrift für alle Links */
+    text-decoration: none; /* Keine Unterstreichung */
+}
+
+/* Spezifische Formatierung für Links im fixed-header */
+
+.fixed-header {
+    position: static;
+    transform: none !important; /* <- verhindert Verschieben im Desktop */
+    transition: none;
+    font-size: 1em;
+    color: #000 ; /* Setzt die Farbe der Links auf Schwarz */
+    text-decoration: none; /* Entferne die Unterstreichung */
+    margin-bottom: 20px;
+    line-height: 1.7; /*grösserer Zeilenabstand im fixed Header*/
+}
+
+.fixed-header a {
+    color: black; /* Setzt die Farbe der Links auf Schwarz */
+    text-decoration: none; /* Entferne die Unterstreichung */
+    font-size: 1rem;
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.fixed-header a:hover {
+    text-decoration: underline; /* Optional: Unterstreichung beim Hover */
+}
+
+.text-section {
+    flex-grow: 1;
+    margin-top: 20px;
+}
+
+/* Text innerhalb der Text-Sektion auf der Home-Seite ausblenden */
+body.home-active .text-section > *:not(.navigation) {
+    display: none;
+}
+
+.text-section p {
+    margin-bottom: 20px;
+}
+
+.project-description {
+    padding-left: 10px; /* Abstand links */
+}
+
+#dynamic-text {
+    margin-top: 20px;
+    padding-left: 10px; /* Abstand links */
+    font-size: 1em;
+    font-style: italic;
+    color: black;
+}
+
+.mobile-menu {
+    display: none; /* Sicherheitshalber auch Menü im Desktop View verstecken */
+}
+
+
+/* generische Regeln für Navigation links */
+/* Regeln für die Navigation */
+.navigation a {
+    text-decoration: none; /* Keine Unterstreichung */
+    font-size: 1rem; /* einheitliche Schriftgröße für die Navigationslinks*/
+    font-style: normal; /* Standard-Schriftstil */
+    display: block; /* Links untereinander anordnen */
+    text-decoration: none; /* Unterstreichung entfernen */
+    margin: 5px 0; /* Abstand zwischen den Links */
+}
+
+.navigation a:hover {
+    text-decoration: underline; /* Unterstreichung beim Hover */
+}
+
+/* Regel für den aktiven Link */
+.navigation a.active {
+    font-style: italic !important; /* Kursivschrift für den aktiven Link */
+}
+
+/* Bilder-Container */
+.Bilder {
+    margin-top: 50px; /* Abstand von oben */
+    margin-bottom: 15%; /* dynamischer Abstand zwischen den Bildern */
+    width: 100vh; /* Breite gleich für alle querformat Bilder */
+}
+
+/* Bilder selbst */
+.Bilder img {
+    display: block; /* Bild als Blockelement */
+    max-width: 100%; /* Bild passt sich der Breite des Containers an */
+    max-height: 90vh; /* Maximale Höhe 80% der Viewport Höhe */
+    object-fit: contain; /* Skaliert das Bild, sodass es vollständig sichtbar bleibt */
+    margin-left: 0; /* Abstand links */
+    padding-top: 10px
+}
+
+/* Querformat-Bilder */
+.Bilder img.landscape {
+    width: 100%; /* Querformat-Bilder füllen den gesamten Platz aus */
+    height: auto; /* Höhe proportional zur Breite */
+}
+
+/* Hochkant-Bilder */
+.Bilder img.portrait {
+    max-height: 1000px; /* Hochkant-Bilder definieren die Box-Größe */
+    width: auto; /* Breite proportional zur Höhe */
+}
+/* Bilder in der rechten Spalte sollen ausgeblendet werden, wenn man auf Info kommt*/
+body.info-active .right-column > *:not(#Info) {
+    display: none;
+}
+
+/* Info-Sektion */
+#Info {
+    padding-top: 50px; /* Abstand von oben */
+    margin-top: 20px; /* Negativer Abstand, um den visuellen Effekt zu korrigieren */
+    display: block;
+    text-align: left;
+    height: auto; /* Höhe an den Inhalt anpassen */
+    padding-bottom: 200px; /* Abstand nach unten */
+    padding-left: 0; /* Abstand links */
+    padding-right: 20px; /* Abstand rechts */
+    /* overflow-y: auto; /* Ermöglicht Scrollen, falls der Text zu lang ist */
+}
+
+#menu-toggle {
+    display: none; /* Standardmäßig ausblenden */
+  }
+}
+
+/* Einstellungen für die Mobile Ansicht */
+
+@media (max-width: 768px) {
+    
+    html, body {
+        background-color: white; /* Weißer Hintergrund für die gesamte Seite */
+        color: black; /* Schwarze Schrift für die gesamte Seite */
+        margin: 0; /* Entfernt Standardabstände */
+        font-family: 'Verdana', sans-serif; /* Einheitliche Schriftart */
+        font-size: 10px; /* Schriftgröße für den Bildschirm */
+        line-height: 1.4; /* Zeilenhöhe für bessere Lesbarkeit */
+        overflow: visible; 
+        white-space: normal; 
+        
+    }
+
+    .container {
+        flex-direction: column; /* Spalten untereinander anordnen */
+    }
+    
+    /* Linke Spalte - im mobile view "oberer" Container */
+    .left-column {
+        display: flex; /* Flexbox für die linke Spalte */
+        flex-direction: column; /* Vertikale Anordnung */
+        align-items: flex-start; /* Inhalt am linken Rand ausrichten */
+        justify-content: flex-start; /* Inhalt am oberen Rand ausrichten */
+        height: 20vh; /* feste Höhe von 20% der Viewporthöhe */
+        width: 100%; /* Volle Breite für mobile Geräte */
+        overflow: hidden; /* Überlauf verstecken */
+        box-sizing: border-box; /* Padding und Border in Breite/Höhe einbeziehen */
+        
+    }
+
+    
+    /* Rechte Spalte */
+    .right-column {
+        position: fixed; /* Position für die rechte Spalte */
+        top: 20vh; /* unter der linken Spalte */
+        box-sizing: border-box; /* Padding und Border in Breite/Höhe einbeziehen */
+        width: 100%; /* Volle Breite für mobile Geräte */
+        height: 80vh; /* Rest des Viewports */
+        overflow-y: auto; /* Scrollen in der rechten Spalte ermöglichen */
+    }
+
+    body.info-active .right-column {
+        top: 0; /* Startet direkt am oberen Rand */
+        height: 100vh; /* Nimmt die gesamte Höhe des Viewports ein */
+    }
+   
+    #menu-toggle {
+        display: block;
+        position: fixed;
+        bottom: 2rem;
+        left: 2rem;
+        font-size: 2rem;
+        background-color: #eee;
+        border: none;
+        border-radius: 0.5rem;
+        padding: 0.5rem 1rem;
+        z-index: 9999;
+        box-shadow: 0 0 5px rgba(0,0,0,0.2);
+        cursor: pointer;
+      }
+
+    .mobile-menu {
+        display: none; /* Standard: versteckt */
+        position: fixed;
+        flex-direction: column; /* Vertikale Anordnung */
+        gap: 0.4rem; /* Abstand zwischen Links */
+        max-width: 250px; /* max. Breite, je nach Geschmack */
+        bottom: 5.5rem; /* etwas über dem Hamburger-Button */
+        left: 1rem;
+        background-color: rgba(255, 255, 255, 0.95);
+        border: 1px solid #ccc;
+        padding: 1rem;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        z-index: 9998;
+    }
+
+    .mobile-menu.active {
+        display: block;
+    }
+
+    .mobile-menu.open {
+        display: flex !important; /* Menü anzeigen, wenn es geöffnet ist */
+    }
+
+    .mobile-menu a {
+        text-decoration: none;
+        color: black;
+        /*font-weight: bold;*/
+        padding: 5px 10px;
+        font-size: 1rem;
+    }
+   
+    /* Navigation: Links nebeneinander platzieren */
+   .navigation {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+    .navigation.show-nav {
+        display: flex;
+    } 
+    .navigation a {
+        text-decoration: none; /* Keine Unterstreichung */
+        font-size: 1rem; /* einheitliche Schriftgröße für die Navigationslinks*/
+        font-style: normal; /* Standard-Schriftstil */
+        display: block; /* Links untereinander anordnen */
+        text-decoration: none; /* Unterstreichung entfernen */
+        margin: 5px 0; /* Abstand zwischen den Links */
+    }
+
+    /* Bilder */
+    .Bilder {
+        margin: 0 auto; /* Zentriert die Bilder */
+        padding: 0 5px; /* rechter und linker Rand bei den Bildern */
+        height: auto; /* Höhe proportional */
+        margin-bottom: 20px; /* Weniger Abstand zwischen den Bildern */
+        box-sizing: border-box; /* Padding und Border in Breite/Höhe einbeziehen */
+    }
+
+    .Bilder img {
+        max-height: 70vh; /* Reduzierte maximale Höhe für kleinere Bildschirme */
+        object-fit: contain; /* Bild füllt Container vollständig aus */
+        width: 100%; /* Bild über die gesamte Breite */
+        height: auto; /* Höhe proportional */
+        display: block;
+        margin: 0 auto; /* Zentriert die Bilder */
+    }
+
+    /* Fixed Header */
+    .fixed-header {
+        position: absolute;
+        padding: 10px;
+        top: 1px; /* Oben am Bildschirm */
+        left: 5px; 
+        width: 100%; /* Volle Breite */
+        background-color: rgba(255, 255, 255, 0.95); /* Leicht transparenter Hintergrund */
+        font-size: 0.9rem;
+        line-height: 1.5;
+        transition: transform 0.3s ease; /* für sanftes Wegscrollen */
+        will-change: transform;
+      }
+
+    .fixed-header a {
+        color: black; /* Setzt die Farbe der Links auf Schwarz */
+        text-decoration: none; /* Entferne die Unterstreichung */
+        font-size: 0.9rem; /* Kleinere Schriftgröße */
+        /* margin-bottom: 10px; /* Abstand zwischen den Links */
+        line-height: 1.5; /* Zeilenhöhe im header*/
+    }
+    .fixed-header a:hover {
+        text-decoration: underline; /* Optional: Unterstreichung beim Hover */
+    }
+
+    /* Textbereich */
+    .text-section {
+        display: flex; /* Flexbox für den Textbereich */
+        align-items: flex-start; /* Text am oberen Rand ausrichten */
+        justify-content: flex-start; /* Zentriert den Text */
+        margin: 0; /* Kein zusätzlicher Abstand */
+        padding-top: 10px; /* Abstand von oben */
+        width: 100%; /* Volle Breite */
+        font-size: 0.9rem; /* Kleinere Schriftgröße */
+        line-height: 1.4; /* Kompaktere Zeilenhöhe */
+        
+    }
+
+    .text-section p {
+        margin-bottom: 10px; /* Weniger Abstand zwischen Absätzen */
+    }
+
+    .project-description,
+    #dynamic-text {
+        height: 100%; /* Nimmt die gesamte Höhe der übergeordneten .text-section ein */
+        display: flex; /* Flexbox für vertikale Ausrichtung */
+        align-items: center; /* Zentriert den Text vertikal */
+        margin: 0; /* Kein zusätzlicher Abstand */
+        padding: 0 10px; /* Einheitlicher Abstand innen */
+       /* padding-top: 10px; /* Abstand von oben */
+        box-sizing: border-box; /* Padding und Border in die Breite/Höhe einbeziehen */
+    }
+
+    .project-description {
+        width: 27%; /* Breite der Projektbeschreibung */
+        padding: 0 10px; /* Abstand links */
+        overflow: hidden;
+        margin: 0; /* Kein zusätzlicher Abstand */
+        white-space: normal !important; /* Zeilenumbruch */
+        box-sizing: border-box;
+        text-align: left; /* Text linksbündig */
+        font-size: 0.9rem; /* Kleinere Schriftgröße */
+    }
+
+    #dynamic-text {
+        width: 73%; /* Breite des dynamischen Textes */
+        padding-left: 10px; /* Abstand links */
+        padding-right: 0; /* kein Abstand nach rechts */
+       
+        overflow: hidden;   
+        white-space: normal !important; /* Zeilenumbruch */
+        box-sizing: border-box;
+        font-style:italic; /* Kursivschrift für den dynamischen Text */
+        text-align: left; /* Text linksbündig */
+        font-size: 0.9rem; /* Kleinere Schriftgröße */
+        
+    }
+
+    /* Dynamischer Text und Projekttext */
+    .text-section.hidden {
+        display: none; /* Textbereich ausblenden */
+    }
+
+    .text-section.active {
+        display: block; /* Textbereich einblenden */
+    }
+    #Info {
+        padding-top: 20px; /* Abstand von oben */
+        margin-top: 0; /* Negativer Abstand, um den visuellen Effekt zu korrigieren */
+        display: block;
+        text-align: left;
+        
+        height: auto; /* Höhe an den Inhalt anpassen */
+        padding-bottom: 200px; /* Abstand nach unten */
+        margin-bottom: 20vh; /* Zusätzlicher Platz unterhalb von #Info */
+        padding-left: 20px; /* Abstand links */
+        padding-right: 20px; /* Abstand rechts */
+        overflow-y: auto; /* Ermöglicht Scrollen, falls der Text zu lang ist */
+    }
+
+
+/* Bilder in der rechten Spalte sollen ausgeblendet werden, wenn man auf Info kommt*/
+body.info-active .right-column > *:not(#Info) {
+    display: none;
+}
+
+
+
+
+}
+@media print {
+    html {
+        font-size: 10pt; /* Schriftgröße für den Druck */
+    }
+}
+
+@media screen {
+    html {
+        font-size: 13.33px; /* Schriftgröße für den Bildschirm */
+    }
+}
+
+
+
+@media screen and (max-width: 480px) {
+    html {
+        font-size: 8pt; /* Schriftgröße für sehr kleine Bildschirme */
+    }
+}
+
+@media screen and (max-width: 320px) {
+    html {
+        font-size: 6pt; /* Schriftgröße für sehr kleine Bildschirme */
+    }
+}
+
+
+
+
+
+
+
+
