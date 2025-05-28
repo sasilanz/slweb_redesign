@@ -176,6 +176,7 @@ body.info-active .right-column > *:not(#Info) {
     padding-bottom: 200px; /* Abstand nach unten */
     padding-left: 0; /* Abstand links */
     padding-right: 20px; /* Abstand rechts */
+    max-width: 90vh; /* Maximale Breite der Info-Sektion */
     /* overflow-y: auto; /* Ermöglicht Scrollen, falls der Text zu lang ist */
 }
 
