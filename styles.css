@@ -412,7 +412,7 @@ body.info-active .right-column > *:not(#Info) {
         height: auto; /* Höhe an den Inhalt anpassen */
         padding-bottom: 200px; /* Abstand nach unten */
         margin-bottom: 20vh; /* Zusätzlicher Platz unterhalb von #Info */
-        padding-left: 20px; /* Abstand links */
+        padding-left: 10px; /* Abstand links */
         padding-right: 20px; /* Abstand rechts */
         overflow-y: auto; /* Ermöglicht Scrollen, falls der Text zu lang ist */
     }
