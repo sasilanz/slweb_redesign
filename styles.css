@@ -211,7 +211,7 @@ body.info-active .right-column > *:not(#Info) {
         flex-direction: column; /* Vertikale Anordnung */
         align-items: flex-start; /* Inhalt am linken Rand ausrichten */
         justify-content: flex-start; /* Inhalt am oberen Rand ausrichten */
-        height: 20vh; /* feste Höhe von 20% der Viewporthöhe */
+        height: 22vh; /* feste Höhe von 20% der Viewporthöhe */
         width: 100%; /* Volle Breite für mobile Geräte */
         overflow: hidden; /* Überlauf verstecken */
         box-sizing: border-box; /* Padding und Border in Breite/Höhe einbeziehen */
@@ -225,7 +225,7 @@ body.info-active .right-column > *:not(#Info) {
         top: 20vh; /* unter der linken Spalte */
         box-sizing: border-box; /* Padding und Border in Breite/Höhe einbeziehen */
         width: 100%; /* Volle Breite für mobile Geräte */
-        height: 80vh; /* Rest des Viewports */
+        height: 78vh; /* Rest des Viewports */
         overflow-y: auto; /* Scrollen in der rechten Spalte ermöglichen */
     }
 
@@ -320,13 +320,14 @@ body.info-active .right-column > *:not(#Info) {
     /* Fixed Header */
     .fixed-header {
         position: absolute;
-        padding: 10px;
+        margin: 0;
         top: 1px; /* Oben am Bildschirm */
-        left: 5px; 
+        left: 10px; 
         width: 100%; /* Volle Breite */
         background-color: rgba(255, 255, 255, 0.95); /* Leicht transparenter Hintergrund */
         font-size: 0.9rem;
         line-height: 1.5;
+        text-decoration: none; /* Keine Unterstreichung */
         transition: transform 0.3s ease; /* für sanftes Wegscrollen */
         will-change: transform;
       }
