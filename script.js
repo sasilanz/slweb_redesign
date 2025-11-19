@@ -67,6 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
         navigationBelow.innerHTML = '';
 
         if (activeIndex === 0) {
+            // Wenn wir bei Home sind, alle Projekte anzeigen (ohne Home selbst zu wiederholen)
             sections.forEach((section, index) => {
                 if (section.id === 'home') {
                     return;
@@ -86,11 +87,8 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
+        // Bei anderen Projekten: Home/Aktuell immer als erstes zeigen
         sections.forEach((section, index) => {
-            if (section.id === 'home') {
-                return;
-            }
-
             const link = document.createElement('a');
             link.href = `#${section.id}`;
             link.textContent = section.getAttribute('data-nav-name') || section.id;

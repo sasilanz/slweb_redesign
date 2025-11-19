@@ -26,7 +26,7 @@
              <!--  Hamburger-Button -NUR- für mobile view eingefügt -->
             <button id="menu-toggle" class="mobile-only">☰</button>
             <nav class="mobile-menu">
-                <a href="#home">Startseite</a>
+                <a href="#home">Aktuell</a>
                 <a href="#Tödistrasse">Tödistrasse</a>
                 <a href="#Krokusstrasse">Krokusstrasse</a>
                 <a href="#Birmensdorferstrasse">Birmensdorferstrasse</a>
@@ -36,17 +36,21 @@
 
             <!--  Navigationslinks mit Projekttext in der linken Spalte im Desktop View -->
             <div class="text-section">
+                <!-- Fixer Text für Projekte -->
+                 <!-- Wenn ein neues Projekt dazukommt, die Zeilen des <div></div> Teils vom letzten Projekt  kopieren, mit dem neuen Projekt als id "neuesProjekt-text". 
+                    class und style bleiben gleich, fixe Beschreibung anpassen -->
+                <div id="home-text" class="project-description" style="display: none;">
+                    <p>Aktuell<br>Die Aufstockung der Krokusstrasse in Dietikon, kurz nach Fertigstellung,<br>an einem farblosen, kalten Wintertag, Blick aus dem Garten der Nachbarn,<br>Dezember 2024<br><br>Foto © Federico Farinatti</p>
+                </div>
                 <!-- Navigationslinks  , link zum neuen Projekt muss hier eingefügt werden, es braucht ein <a href= für das neue projekt-->
                 <div id="navigation-above" class="navigation">
+                    <a href="#home">Aktuell</a>
                     <a href="#Tödistrasse">Tödistrasse</a>
                     <a href="#Krokusstrasse">Krokusstrasse</a>
                     <a href="#Birmensdorferstrasse">Birmensdorferstrasse</a>
                     <a href="#Bijenven">Bijenven</a>
                     <a href="#Info">Info</a>
                 </div>
-                <!-- Fixer Text für Projekte -->
-                 <!-- Wenn ein neues Projekt dazukommt, die Zeilen des <div></div> Teils vom letzten Projekt  kopieren, mit dem neuen Projekt als id "neuesProjekt-text". 
-                    class und style bleiben gleich, fixe Beschreibung anpassen -->
                 <div id="Tödistrasse-text" class="project-description" style="display: none;">
                     <p>Pfäffikon<br>Komplettsanierung<br>Direktauftrag<br>2024-2025<br>laufend</p>
                 </div>
@@ -77,8 +81,15 @@
         <div class="right-column">
             <!-- "Homepage", bzw Landingpage mit Start-Bild , wenn es ein anderes Bild sein soll, bei <img src= das bild ändern -->
             <section id="home">
+                <div class="intro-text">
+                    Fokus auf Bauten für private Auftraggeber<br>
+                    Nachhaltigkeit durch Bestandserhalt, Verzicht, Zirkulär bauen, die Verwendung von ökologischen Baumaterialien<br>
+                    Ganzheitlicher Leistungsbereich von Studie bis örtliche Bauleitung<br>
+                    Projektführung auf Basis von klarer Kommunikation im kontinuierlichen Dialog<br>
+                    Netzwerk an vertraute Planer und Unternehmer für effiziente Umsetzung
+                </div>
                 <div class="Bilder" data-description="">
-                    <img src="img/01Homepage_Bild.jpg" alt="Homepage Bild"> 
+                    <img src="img/KRK-01.jpg" alt="Startseite - Aktuelles Projekt"> 
                 </div>
             </section>
 
@@ -86,6 +97,7 @@
             <!-- Für ein neues Projekt braucht es eine neue <section>, also eine bestehende section kopieren und mit neuer id benennen. 
                 Für jedes Bild muss der Text eingefügt sowie der link zum bild im img ordner gemacht werden. analog zum bestehenden projekt.
                 alt= ist als alternative beschreibung des bildes wichtig, für behinderte leute oder so-->
+
 
             <!-- Projekt  TOE, Pfäffikon-->
             <section id="Tödistrasse">
@@ -147,7 +159,8 @@
                 Die roten Klinkersteine bilden einen Kontrast zur Brüstung aus Beton. Der Farbanstrich wird zurückhaltend eingesetzt, 
                 entweder als technischer Schutzschicht oder um bestimmte Bauteile hervorzuheben. 
                 <br><br>Photo © Sander Lückers">
-                    <img src="img/TOE-10.jpg" alt="TOE Bild 10">
+                    <img src="img/TOE-10.jpg" alt="Projekt 1 Bild 10">
+                </div>
             </section>
 
 
@@ -382,24 +395,19 @@
                     Adresse<br>
                     Post & c/o Birmensdorferstrasse 604, 8055 Zürich<br>
                     Arbeitsplatz im <a href="https://www.studio-G45.ch/">Studio-G45</a>, Grubenstrasse 45, 8045 Zürich<br><br>
-                    Profil<br>
-                    Die Firma fokussiert sich auf Planung und Bauen für private Auftraggeber. 
-                    Die kleinmassstäblichen Projekte sind überschaubar und ermöglichen eine Entdeckungstour der persönlichen Werte in der Architektur. 
-                    Dazu ist es wichtig den ganzen Prozess zu erleben, von Machbarkeitsstudie bis hin zur Werkübergabe, die Planung, aber auch die Bauleitung vor Ort. 
-                    Das sorgfältig aufgebaute Netzwerk ermöglicht eine zielführende, und qualitativ hochwertige Planung und Ausführung der Projekte.<br><br>
-                    Werte<br>
-                    Architektur sollte sich nicht legitimieren über eine Bildvision, vielmehr als eine Kollage aus Entscheidungen.
-                    Zusammenarbeit sollte angenehm gestaltet werden können; Planung und Bauen sind sozial geprägte Prozesse.
-                    Der Architekt moderiert das Suchen nach Lösungen und sucht dazu den Dialog mit allen Teilnehmern.
-                    Um unsere Umwelt zu schonen, und das Bauen nicht überteuern zu lassen, sind kreative Lösungen und Umdenken gefragt.
-                    Unsere Ressourcen werden beschränkter und die Verfügbarkeit von Material und Arbeit ist nicht immer selbstverständlich.
-                    Wo nur möglich sollten bestehende Gebäude weiter genutzt und gebrauchte Materialien neu eingesetzt werden.
-                    Wo möglich soll mit lokalen Handwerkern und vorhandenen Materialien gebaut werden.
-                    Wertschätzung von Material und deren Verarbeitung stellt den Drang nach Beschichten und Abdecken in Frage.<br><br>
+                    Profil und Werte<br>
+                    Sander Lückers Architektur GmbH fokussiert sich auf Umbauten für private Auftraggeber. Gesellschaftliche Aufgaben wie Bestandserhalt, 
+                    nachhaltiges Bauen und sparsamer Ressourceneinsatz werden mit der jeweiligen Bestandslage und den Gegebenheiten vor Ort verknüpft. 
+                    Die Widerspenstigkeit des Bauens im Bestand und der kontinuierliche Dialog während des Projekts erfordern eine robuste Gestaltung, die laufend Änderungen ermöglicht. 
+                    Wird dieser Prozess gut moderiert, entsteht gemeinsam eine hohe Qualität und ein echtes Unikat. <br>
+                    Meine Expertise deckt alle Phasen der Planung und des Baus ab – von der Studie bis zur örtlichen Bauleitung – und gewährleistet durchgängig hohe Qualität. 
+                    Ein sorgfältig aufgebautes Netzwerk aus Planern und Unternehmern ermöglicht eine zielführende, hochwertige und möglichst kostengünstige Umsetzung der Projekte.
+
                     Partner<br>
-                    APW AG (Baumanagement), Seforb SARL (Hochbau Ingenieur), Bakus Bauphysik & Akustik AG, Technik Im Bau AG (Sanitär), Eicher & Pauli AG
-                    (Heizung, Lüftung), S3-Engineering (Heizung, Lüftung, Sanitär), UNAX (Schadstoff Analyse), Baubüro Insitu AG, Zirkular GmbH (Bauphysik,
-                    Kreislaufwirtschaft), Federico Farinatti (Fotografie)<br><br>
+                    Baubüro Insitu, APW (Baumanagement), Seforb (Hochbau Ingenieur), Bardak, (Fassadenplanung), Bakus (Bauphysik), 
+                    TIB (Sanitärplanung), Eicher & Pauli (Heizungs-, Lüftungsplanung), UNAX (Schadstoff Expertise), Zirkular (Kreislaufwirtschaft), 
+                    Federico Farinatti (Fotografie), Gavran (Schadstoff Sanierung), Repoxit (Zementböden),  Schärer (Holzbau), Bütler (Holzbau), 
+                    Ralph Bachmann (Haustechnik), Trust Baut (Gipserarbeiten), Poletti Jäger (Kaminbau), Ryter & Söhne (Platten), Kästners Söhne (Schreinerarbeiten)<br><br>
                     Firma<br>
                     Sander Lückers Architektur GmbH, Zürich. Firmennummer (UID) CHE-237.900.821, Eintragung per 12.06.2023<br>
                     Sander Lückers ist eingetragener Architekt im Niederländischen Architektenregister unter Nummer 1.070815.022.<br><br>

@@ -133,6 +133,16 @@ body.home-active .text-section > *:not(.navigation) {
     font-style: italic !important; /* Kursivschrift für den aktiven Link */
 }
 
+/* Intro Text über dem ersten Bild */
+.intro-text {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-left: 0;
+    font-size: 1em;
+    line-height: 2.0;  /* Grösserer Zeilenabstand für bessere Lesbarkeit */
+    max-width: 100vh;
+}
+
 /* Bilder-Container */
 .Bilder {
     margin-top: 50px; /* Abstand von oben */
