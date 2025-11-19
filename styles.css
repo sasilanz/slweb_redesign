@@ -333,7 +333,7 @@ body.info-active .right-column > *:not(#Info) {
         margin: 0;
         top: 1px; /* Oben am Bildschirm */
         left: 10px; 
-        width: 100%; /* Volle Breite */
+        width: 48%; /* Halbe Breite */
         background-color: rgba(255, 255, 255, 0.95); /* Leicht transparenter Hintergrund */
         font-size: 0.9rem;
         line-height: 1.5;
@@ -390,6 +390,29 @@ body.info-active .right-column > *:not(#Info) {
         box-sizing: border-box;
         text-align: left; /* Text linksbündig */
         font-size: 0.9rem; /* Kleinere Schriftgröße */
+    }
+
+    /* home-text rechts neben fixed-header positionieren */
+    #home-text {
+        position: absolute;
+        top: 1px;
+        left: calc(48% + 20px); /* Rechts vom fixed-header */
+        width: calc(48% - 20px); /* Rest der Breite */
+        background-color: rgba(255, 255, 255, 0.95);
+        padding: 0 10px;
+        font-size: 0.9rem;
+        line-height: 1.5;
+        transition: transform 0.3s ease; /* Gleiche Transition wie fixed-header */
+        will-change: transform;
+        /* display wird von JavaScript gesteuert */
+    }
+
+    /* intro-text (5-Zeiler) größere Schrift und Zeilenabstand */
+    .intro-text {
+        font-size: 1rem;
+        line-height: 1.8;
+        margin-bottom: 50px; /* Abstand zum Bild wie im Desktop View */
+        padding-left: 10px; /* Abstand links wie beim fixed-header */
     }
 
     #dynamic-text {

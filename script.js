@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const rightColumn = document.querySelector('.right-column');
     const imagesForDynamicText = document.querySelectorAll('.Bilder[data-description]');
     const fixedHeader = document.querySelector('.fixed-header'); //Header hier definieren
+    const homeText = document.getElementById('home-text'); //home-text hier definieren
 
     // --- Hilfsfunktionen ---
     const isElementAtReferencePoint = (element, referencePoint) => {
@@ -58,6 +59,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
             desc.style.display = (sectionIndex === activeIndex) ? 'block' : 'none';
         });
+
+        // Im Mobile View: home-text nur bei home section anzeigen
+        if (window.innerWidth <= 768 && homeText) {
+            homeText.style.display = (activeIndex === 0) ? 'block' : 'none';
+        }
 
         return activeIndex;
     };
@@ -141,8 +147,17 @@ document.addEventListener('DOMContentLoaded', () => {
             if (scrollTop > headerHeight) {
                 fixedHeader.style.transform = `translateY(-${headerHeight}px)`;
                 fixedHeader.style.transition = 'transform 0.3s ease';
+                // home-text ebenfalls wegscrollen
+                if (homeText) {
+                    homeText.style.transform = `translateY(-${headerHeight}px)`;
+                    homeText.style.transition = 'transform 0.3s ease';
+                }
             } else {
                 fixedHeader.style.transform = 'translateY(0)';
+                // home-text wieder einblenden
+                if (homeText) {
+                    homeText.style.transform = 'translateY(0)';
+                }
             }
         }
     };
