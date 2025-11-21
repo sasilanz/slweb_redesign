@@ -213,10 +213,30 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileMenu = document.querySelector('.mobile-menu');
 
     if (toggleButton && mobileMenu) {
-        toggleButton.addEventListener('click', () => {
+        toggleButton.addEventListener('click', (event) => {
+            event.stopPropagation(); // Verhindert dass das Klick-Event zum document durchdringt
             console.log('Toggle Button clicked');
             mobileMenu.classList.toggle('open');
             console.log('Menu classes:', mobileMenu.className);
+        });
+
+        // Menü schließen wenn außerhalb geklickt wird
+        document.addEventListener('click', (event) => {
+            if (mobileMenu.classList.contains('open')) {
+                // Prüfen ob der Klick innerhalb des Menüs war
+                if (!mobileMenu.contains(event.target) && event.target !== toggleButton) {
+                    mobileMenu.classList.remove('open');
+                    console.log('Menu closed by outside click');
+                }
+            }
+        });
+
+        // Menü auch schließen wenn ein Link geklickt wird
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('open');
+                console.log('Menu closed by link click');
+            });
         });
     }
 });

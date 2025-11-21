@@ -9,7 +9,7 @@
         color: black; /* Schwarze Schrift für die gesamte Seite */
         margin: 0; /* Entfernt Standardabstände */
         font-family: 'Times New Roman', Times, serif; /* Einheitliche Schriftart */
-        /*font-size: 13.33px; /* Schriftgröße für den Bildschirm */
+        /* font-size: 13.33px; Schriftgröße für den Bildschirm */
         font-size: 15px; /* für Times New Roman etwas grösser */
         line-height: 1.6; /* Zeilenhöhe für bessere Lesbarkeit */
         box-sizing: border-box; /* Padding und Border in Breite/Höhe einbeziehen */
@@ -232,7 +232,7 @@ body.info-active .right-column > *:not(#Info) {
         flex-direction: column; /* Vertikale Anordnung */
         align-items: flex-start; /* Inhalt am linken Rand ausrichten */
         justify-content: flex-start; /* Inhalt am oberen Rand ausrichten */
-        height: 18vh; /* Reduziert für weniger Leerraum */
+        height: 19vh; /* Optimaler Abstand */
         width: 100%; /* Volle Breite für mobile Geräte */
         overflow: hidden; /* Überlauf verstecken */
         box-sizing: border-box; /* Padding und Border in Breite/Höhe einbeziehen */
@@ -243,10 +243,10 @@ body.info-active .right-column > *:not(#Info) {
     /* Rechte Spalte */
     .right-column {
         position: fixed; /* Position für die rechte Spalte */
-        top: 18vh; /* Angepasst an neue left-column Höhe */
+        top: 19vh; /* Angepasst an neue left-column Höhe */
         box-sizing: border-box; /* Padding und Border in Breite/Höhe einbeziehen */
         width: 100%; /* Volle Breite für mobile Geräte */
-        height: 82vh; /* Rest des Viewports */
+        height: 81vh; /* Rest des Viewports */
         overflow-y: auto; /* Scrollen in der rechten Spalte ermöglichen */
     }
 
@@ -344,7 +344,7 @@ body.info-active .right-column > *:not(#Info) {
         margin: 0;
         top: 16px; /* Mehr Abstand vom oberen Rand */
         left: 10px; 
-        width: 35%; /* Schmaler für bessere Balance */
+        width: 42%; /* Schmaler für 50/50 Balance */
         background-color: rgba(255, 255, 255, 0.95); /* Leicht transparenter Hintergrund */
         font-size: 0.9rem;
         line-height: 1.5;
@@ -356,6 +356,10 @@ body.info-active .right-column > *:not(#Info) {
         padding-top: 3px; /* Etwas Abstand zur oberen Linie */
         padding-bottom: 3px; /* Etwas Abstand zur unteren Linie */
       }
+
+    .fixed-header p {
+        margin: 0; /* Entfernt margin vom Paragraph */
+    }
 
     .fixed-header a {
         color: black; /* Setzt die Farbe der Links auf Schwarz */
@@ -411,8 +415,8 @@ body.info-active .right-column > *:not(#Info) {
     #Aktuelles-text {
         position: absolute;
         top: 10px; /* Weniger Abstand für bessere optische Zentrierung */
-        left: calc(40% + 20px); /* Rechts vom fixed-header */
-        width: calc(57%); /* Breiter - nutzt mehr Platz */
+        left: calc(50% - 10px); /* 10px näher zur Mitte */
+        width: calc(50% - 10px); /* 50% minus rechter Rand */
         background-color: rgba(255, 255, 255, 0.95);
         padding: 0 10px 0 10px; /* Links und rechts Padding */
         padding-right: 15px; /* Mehr rechter Rand */
@@ -429,8 +433,8 @@ body.info-active .right-column > *:not(#Info) {
 
     /* intro-text (5-Zeiler) größere Schrift und Zeilenabstand */
     .intro-text {
-        font-size: 1.2rem;
-        line-height: 1.8;
+        font-size: 1.2rem; /* Größere Schrift wie ursprünglich */
+        line-height: 1.8; /* Luftigerer Zeilenabstand */
         margin-bottom: 30px; /* Abstand zum Bild wie im Desktop View */
         padding-left: 10px; /* Abstand links wie beim fixed-header */
     }
