@@ -8,8 +8,9 @@
         background-color: white; /* Weißer Hintergrund für die gesamte Seite */
         color: black; /* Schwarze Schrift für die gesamte Seite */
         margin: 0; /* Entfernt Standardabstände */
-        font-family: 'Verdana', sans-serif; /* Einheitliche Schriftart */
-        font-size: 13.33px; /* Schriftgröße für den Bildschirm */
+        font-family: 'Times New Roman', Times, serif; /* Einheitliche Schriftart */
+        /*font-size: 13.33px; /* Schriftgröße für den Bildschirm */
+        font-size: 15px; /* für Times New Roman etwas grösser */
         line-height: 1.6; /* Zeilenhöhe für bessere Lesbarkeit */
         box-sizing: border-box; /* Padding und Border in Breite/Höhe einbeziehen */
     }
@@ -73,7 +74,7 @@ a {
 .fixed-header a {
     color: black; /* Setzt die Farbe der Links auf Schwarz */
     text-decoration: none; /* Entferne die Unterstreichung */
-    font-size: 1rem;
+    font-size: inherit; /* Erbt Basis-Schriftgröße */
     margin-bottom: 20px;
     line-height: 1.7;
 }
@@ -98,12 +99,13 @@ body.home-active .text-section > *:not(.navigation) {
 
 .project-description {
     padding-left: 10px; /* Abstand links */
+    font-size: inherit; /* Erbt Basis-Schriftgröße */
 }
 
 #dynamic-text {
     margin-top: 20px;
     padding-left: 10px; /* Abstand links */
-    font-size: 1em;
+    font-size: inherit; /* Erbt Basis-Schriftgröße */
     font-style: italic;
     color: black;
 }
@@ -117,7 +119,7 @@ body.home-active .text-section > *:not(.navigation) {
 /* Regeln für die Navigation */
 .navigation a {
     text-decoration: none; /* Keine Unterstreichung */
-    font-size: 1rem; /* einheitliche Schriftgröße für die Navigationslinks*/
+    font-size: inherit; /* Erbt Basis-Schriftgröße */
     font-style: normal; /* Standard-Schriftstil */
     display: block; /* Links untereinander anordnen */
     text-decoration: none; /* Unterstreichung entfernen */
@@ -203,11 +205,11 @@ body.info-active .right-column > *:not(#Info) {
         background-color: white; /* Weißer Hintergrund für die gesamte Seite */
         color: black; /* Schwarze Schrift für die gesamte Seite */
         margin: 0; /* Entfernt Standardabstände */
-        font-family: 'Verdana', sans-serif; /* Einheitliche Schriftart */
+        font-family: 'Times New Roman', Times, serif; /* Einheitliche Schriftart */
         font-size: 10px; /* Schriftgröße für den Bildschirm */
         line-height: 1.4; /* Zeilenhöhe für bessere Lesbarkeit */
         overflow: visible; 
-        white-space: normal; 
+        white-space: normal;
         
     }
 
