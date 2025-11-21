@@ -69,8 +69,8 @@ a {
     text-decoration: none; /* Entferne die Unterstreichung */
     margin-bottom: 20px;
     line-height: 1.7; /*grösserer Zeilenabstand im fixed Header*/
-    border-top: 1px solid black; /* Obere Linie statt Striche */
-    border-bottom: 1px solid black; /* Untere Linie statt Striche */
+    border-top: 1px dashed black; /* Obere Linie statt Striche */
+    border-bottom: 1px dashed black; /* Untere Linie statt Striche */
     padding-top: 5px; /* Etwas Abstand zur oberen Linie */
     padding-bottom: 5px; /* Etwas Abstand zur unteren Linie */
 }
@@ -351,8 +351,8 @@ body.info-active .right-column > *:not(#Info) {
         text-decoration: none; /* Keine Unterstreichung */
         transition: transform 0.3s ease; /* für sanftes Wegscrollen */
         will-change: transform;
-        border-top: 1px solid black; /* Obere Linie */
-        border-bottom: 1px solid black; /* Untere Linie */
+        border-top: 1px dashed black; /* Obere Linie */
+        border-bottom: 1px dashed black; /* Untere Linie */
         padding-top: 3px; /* Etwas Abstand zur oberen Linie */
         padding-bottom: 3px; /* Etwas Abstand zur unteren Linie */
       }
