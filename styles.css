@@ -412,12 +412,14 @@ body.info-active .right-column > *:not(#Info) {
         position: absolute;
         top: 10px; /* Weniger Abstand für bessere optische Zentrierung */
         left: calc(40% + 20px); /* Rechts vom fixed-header */
-        width: calc(65%); /* Breiter für bessere Balance */
+        width: calc(57%); /* Breiter - nutzt mehr Platz */
         background-color: rgba(255, 255, 255, 0.95);
-        padding: 0 10px;
+        padding: 0 10px 0 10px; /* Links und rechts Padding */
+        padding-right: 15px; /* Mehr rechter Rand */
         padding-top: 0; /* Kein extra padding, da schon durch top ausgerichtet */
         font-size: 0.9rem;
         line-height: 1.6; /* Etwas mehr Zeilenabstand */
+        font-style: italic; /* Kursiv wie dynamischer Text */
         transition: transform 0.3s ease; /* Gleiche Transition wie fixed-header */
         will-change: transform;
         display: flex;
