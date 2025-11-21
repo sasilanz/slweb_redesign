@@ -102,6 +102,11 @@ body.home-active .text-section > *:not(.navigation) {
     font-size: inherit; /* Erbt Basis-Schriftgröße */
 }
 
+/* Aktuelles-Text kursiv wie dynamischer Text */
+#Aktuelles-text {
+    font-style: italic;
+}
+
 #dynamic-text {
     margin-top: 20px;
     padding-left: 10px; /* Abstand links */
@@ -140,8 +145,8 @@ body.home-active .text-section > *:not(.navigation) {
     margin-top: 40px;
     margin-bottom: 40px;
     padding-left: 0;
-    font-size: 1.2em;
-    line-height: 2.0;  /* Grösserer Zeilenabstand für bessere Lesbarkeit */
+    font-size: 1.6em;
+    line-height: 1.8;  /* Grösserer Zeilenabstand für bessere Lesbarkeit */
     width: 100vh; /* Gleiche Breite wie die Bilder */
 }
 
@@ -223,7 +228,7 @@ body.info-active .right-column > *:not(#Info) {
         flex-direction: column; /* Vertikale Anordnung */
         align-items: flex-start; /* Inhalt am linken Rand ausrichten */
         justify-content: flex-start; /* Inhalt am oberen Rand ausrichten */
-        height: 22vh; /* feste Höhe von 20% der Viewporthöhe */
+        height: 18vh; /* Reduziert für weniger Leerraum */
         width: 100%; /* Volle Breite für mobile Geräte */
         overflow: hidden; /* Überlauf verstecken */
         box-sizing: border-box; /* Padding und Border in Breite/Höhe einbeziehen */
@@ -234,10 +239,10 @@ body.info-active .right-column > *:not(#Info) {
     /* Rechte Spalte */
     .right-column {
         position: fixed; /* Position für die rechte Spalte */
-        top: 20vh; /* unter der linken Spalte */
+        top: 18vh; /* Angepasst an neue left-column Höhe */
         box-sizing: border-box; /* Padding und Border in Breite/Höhe einbeziehen */
         width: 100%; /* Volle Breite für mobile Geräte */
-        height: 78vh; /* Rest des Viewports */
+        height: 82vh; /* Rest des Viewports */
         overflow-y: auto; /* Scrollen in der rechten Spalte ermöglichen */
     }
 
@@ -402,16 +407,19 @@ body.info-active .right-column > *:not(#Info) {
         width: calc(48% - 20px); /* Rest der Breite */
         background-color: rgba(255, 255, 255, 0.95);
         padding: 0 10px;
+        padding-top: 5px; /* Etwas Abstand von oben */
         font-size: 0.9rem;
-        line-height: 1.5;
+        line-height: 1.6; /* Etwas mehr Zeilenabstand */
         transition: transform 0.3s ease; /* Gleiche Transition wie fixed-header */
         will-change: transform;
-        /* display wird von JavaScript gesteuert */
+        display: flex;
+        align-items: center; /* Vertikal zentriert wie dynamischer Text */
+        /* display block/none wird von JavaScript gesteuert */
     }
 
     /* intro-text (5-Zeiler) größere Schrift und Zeilenabstand */
     .intro-text {
-        font-size: 1rem;
+        font-size: 1.2rem;
         line-height: 1.8;
         margin-bottom: 30px; /* Abstand zum Bild wie im Desktop View */
         padding-left: 10px; /* Abstand links wie beim fixed-header */
