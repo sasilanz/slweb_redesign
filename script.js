@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const rightColumn = document.querySelector('.right-column');
     const imagesForDynamicText = document.querySelectorAll('.Bilder[data-description]');
     const fixedHeader = document.querySelector('.fixed-header'); //Header hier definieren
-    const homeText = document.getElementById('home-text'); //home-text hier definieren
+    const aktuellesText = document.getElementById('Aktuelles-text'); //Aktuelles-text hier definieren
 
     // --- Hilfsfunktionen ---
     const isElementAtReferencePoint = (element, referencePoint) => {
@@ -57,12 +57,17 @@ document.addEventListener('DOMContentLoaded', () => {
             const sectionId = desc.id.replace('-text', '');
             const sectionIndex = Array.from(sections).findIndex(sec => sec.id === sectionId);
 
-            desc.style.display = (sectionIndex === activeIndex) ? 'block' : 'none';
+            // Aktuelles-text wird in der Navigation eingeblendet, nicht als separates DIV
+            if (desc.id === 'Aktuelles-text') {
+                desc.style.display = 'none';
+            } else {
+                desc.style.display = (sectionIndex === activeIndex) ? 'block' : 'none';
+            }
         });
 
-        // Im Mobile View: home-text nur bei home section anzeigen
-        if (window.innerWidth <= 768 && homeText) {
-            homeText.style.display = (activeIndex === 0) ? 'block' : 'none';
+        // Im Mobile View: Aktuelles-text nur bei Aktuelles section anzeigen
+        if (window.innerWidth <= 768 && aktuellesText) {
+            aktuellesText.style.display = (activeIndex === 0) ? 'block' : 'none';
         }
 
         return activeIndex;
@@ -73,12 +78,8 @@ document.addEventListener('DOMContentLoaded', () => {
         navigationBelow.innerHTML = '';
 
         if (activeIndex === 0) {
-            // Wenn wir bei Home sind, alle Projekte anzeigen (ohne Home selbst zu wiederholen)
+            // Wenn wir bei Aktuelles sind, Aktuelles als aktiven Link + Text + alle anderen Projekte anzeigen
             sections.forEach((section, index) => {
-                if (section.id === 'home') {
-                    return;
-                }
-
                 const link = document.createElement('a');
                 link.href = `#${section.id}`;
                 link.textContent = section.getAttribute('data-nav-name') || section.id;
@@ -88,7 +89,21 @@ document.addEventListener('DOMContentLoaded', () => {
                     event.preventDefault();
                     section.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 });
-                navigationAbove.appendChild(link);
+
+                // Aktuelles Link als aktiv markieren
+                if (index === 0) {
+                    link.classList.add('active');
+                    navigationAbove.appendChild(link);
+                    
+                    // Aktuelles-Text direkt nach dem Link einfügen
+                    if (aktuellesText) {
+                        const textClone = aktuellesText.cloneNode(true);
+                        textClone.style.display = 'block';
+                        navigationAbove.appendChild(textClone);
+                    }
+                } else {
+                    navigationAbove.appendChild(link);
+                }
             });
             return;
         }
@@ -147,16 +162,16 @@ document.addEventListener('DOMContentLoaded', () => {
             if (scrollTop > headerHeight) {
                 fixedHeader.style.transform = `translateY(-${headerHeight}px)`;
                 fixedHeader.style.transition = 'transform 0.3s ease';
-                // home-text ebenfalls wegscrollen
-                if (homeText) {
-                    homeText.style.transform = `translateY(-${headerHeight}px)`;
-                    homeText.style.transition = 'transform 0.3s ease';
+                // Aktuelles-text ebenfalls wegscrollen
+                if (aktuellesText) {
+                    aktuellesText.style.transform = `translateY(-${headerHeight}px)`;
+                    aktuellesText.style.transition = 'transform 0.3s ease';
                 }
             } else {
                 fixedHeader.style.transform = 'translateY(0)';
-                // home-text wieder einblenden
-                if (homeText) {
-                    homeText.style.transform = 'translateY(0)';
+                // Aktuelles-text wieder einblenden
+                if (aktuellesText) {
+                    aktuellesText.style.transform = 'translateY(0)';
                 }
             }
         }
