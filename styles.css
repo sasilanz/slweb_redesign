@@ -69,6 +69,10 @@ a {
     text-decoration: none; /* Entferne die Unterstreichung */
     margin-bottom: 20px;
     line-height: 1.7; /*grösserer Zeilenabstand im fixed Header*/
+    border-top: 1px solid black; /* Obere Linie statt Striche */
+    border-bottom: 1px solid black; /* Untere Linie statt Striche */
+    padding-top: 5px; /* Etwas Abstand zur oberen Linie */
+    padding-bottom: 5px; /* Etwas Abstand zur unteren Linie */
 }
 
 .fixed-header a {
@@ -338,15 +342,19 @@ body.info-active .right-column > *:not(#Info) {
     .fixed-header {
         position: absolute;
         margin: 0;
-        top: 1px; /* Oben am Bildschirm */
+        top: 16px; /* Mehr Abstand vom oberen Rand */
         left: 10px; 
-        width: 48%; /* Halbe Breite */
+        width: 35%; /* Schmaler für bessere Balance */
         background-color: rgba(255, 255, 255, 0.95); /* Leicht transparenter Hintergrund */
         font-size: 0.9rem;
         line-height: 1.5;
         text-decoration: none; /* Keine Unterstreichung */
         transition: transform 0.3s ease; /* für sanftes Wegscrollen */
         will-change: transform;
+        border-top: 1px solid black; /* Obere Linie */
+        border-bottom: 1px solid black; /* Untere Linie */
+        padding-top: 3px; /* Etwas Abstand zur oberen Linie */
+        padding-bottom: 3px; /* Etwas Abstand zur unteren Linie */
       }
 
     .fixed-header a {
@@ -402,12 +410,12 @@ body.info-active .right-column > *:not(#Info) {
     /* Aktuelles-text rechts neben fixed-header positionieren */
     #Aktuelles-text {
         position: absolute;
-        top: 1px;
-        left: calc(48% + 20px); /* Rechts vom fixed-header */
-        width: calc(48% - 20px); /* Rest der Breite */
+        top: 10px; /* Weniger Abstand für bessere optische Zentrierung */
+        left: calc(40% + 20px); /* Rechts vom fixed-header */
+        width: calc(65%); /* Breiter für bessere Balance */
         background-color: rgba(255, 255, 255, 0.95);
         padding: 0 10px;
-        padding-top: 5px; /* Etwas Abstand von oben */
+        padding-top: 0; /* Kein extra padding, da schon durch top ausgerichtet */
         font-size: 0.9rem;
         line-height: 1.6; /* Etwas mehr Zeilenabstand */
         transition: transform 0.3s ease; /* Gleiche Transition wie fixed-header */

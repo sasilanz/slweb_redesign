@@ -157,9 +157,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const handleHeaderScroll = () => {
         if (window.innerWidth <= 768 && rightColumn && fixedHeader) {
             const scrollTop = rightColumn.scrollTop;
-            const headerHeight = fixedHeader.offsetHeight;
+            const headerHeight = fixedHeader.offsetHeight + 20; // +20px extra um Borders und top-spacing komplett zu verstecken
 
-            if (scrollTop > headerHeight) {
+            if (scrollTop > fixedHeader.offsetHeight) {
                 fixedHeader.style.transform = `translateY(-${headerHeight}px)`;
                 fixedHeader.style.transition = 'transform 0.3s ease';
                 // Aktuelles-text ebenfalls wegscrollen
