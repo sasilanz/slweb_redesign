@@ -431,12 +431,12 @@ body.info-active .right-column > *:not(#Info) {
         /* display block/none wird von JavaScript gesteuert */
     }
 
-    /* intro-text (5-Zeiler) größere Schrift und Zeilenabstand */
+    /* intro-text (6-Zeiler) Schrift und Zeilenabstand */
     .intro-text {
-        font-size: 1.2rem; /* Größere Schrift wie ursprünglich */
-        line-height: 1.8; /* Luftigerer Zeilenabstand */
+        font-size: 1.1rem; /* Schriftgrösse */
+        line-height: 1.6; /* Zeilenabstand */
         margin-bottom: 30px; /* Abstand zum Bild wie im Desktop View */
-        padding-left: 10px; /* Abstand links wie beim fixed-header */
+        padding-left: 10px; /* Abstand links gleich wie beim fixed-header */
     }
 
     #dynamic-text {
