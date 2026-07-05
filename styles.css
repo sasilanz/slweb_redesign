@@ -1,5 +1,3 @@
-
-
 /* Einstellungen für die Desktop Ansicht */
 
 @media (min-width: 769px) {
@@ -431,12 +429,12 @@ body.info-active .right-column > *:not(#Info) {
         /* display block/none wird von JavaScript gesteuert */
     }
 
-    /* intro-text (6-Zeiler) Schrift und Zeilenabstand */
+    /* intro-text (6-Zeiler) größere Schrift und Zeilenabstand */
     .intro-text {
-        font-size: 1.1rem; /* Schriftgrösse */
-        line-height: 1.6; /* Zeilenabstand */
-        margin-bottom: 30px; /* Abstand zum Bild wie im Desktop View */
-        padding-left: 10px; /* Abstand links gleich wie beim fixed-header */
+        font-size: 1.1rem; /* Größere Schrift wie ursprünglich */
+        line-height: 1.6; /* Luftigerer Zeilenabstand */
+        margin-bottom: 20px; /* Abstand zum Bild wie im Desktop View */
+        padding-left: 10px; /* Abstand links wie beim fixed-header */
     }
 
     #dynamic-text {
@@ -510,11 +508,3 @@ body.info-active .right-column > *:not(#Info) {
         font-size: 6pt; /* Schriftgröße für sehr kleine Bildschirme */
     }
 }
-
-
-
-
-
-
-
-
